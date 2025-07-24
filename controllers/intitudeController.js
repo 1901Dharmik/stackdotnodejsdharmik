@@ -7,6 +7,7 @@ const intitudeController = async (req, res) => {
       message: "Instutude created successfully",
       institude: newInstutude,
     });
+
   } catch (error) {
     return res.status(500).json({ message: "Internal server error" });
   }
@@ -15,7 +16,7 @@ const getAllInstitudes = async (req, res) => {
   try {
     const { type } = req.query;
     const filter = type ? { type } : {};
-    const institudeList = await Instutude.find(filter).populate("board");
+    const institudeList = await Instutude.find(filter);
 
     return res.status(200).json({
       message: "All Institudes fetched successfully",

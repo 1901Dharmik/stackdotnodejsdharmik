@@ -1,4 +1,4 @@
-import classModel from "../models/classModel";
+import classModel from "../models/classModel.js";
 const classController = async (req, res) => {
   try {
     const newClass = (await classModel.create(req.body)).populate('board');

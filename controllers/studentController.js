@@ -1,4 +1,4 @@
-import studentModel from "../models/studentModel";
+import studentModel from "../models/studentModel.js";
 const studentController = async (req, res) => {
   try {
     const newStudent = (await studentModel.create(req.body)).populate([

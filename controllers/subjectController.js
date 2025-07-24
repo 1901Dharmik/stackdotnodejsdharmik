@@ -1,4 +1,4 @@
-import subjectModel from "../models/subjectModel";
+import subjectModel from "../models/subjectModel.js";
 const getAllSubjects = async (req, res) => {
   try {
     const { institudeType, classId } = req.query;

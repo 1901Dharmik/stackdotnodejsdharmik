@@ -6,7 +6,7 @@ import connectDB from './config/dbConfig.js';
 import intitudeRoute from './routes/intitudeRoute.js';
 import boardRoute from './routes/boardRoute.js';
 import studentRoute from './routes/studentRoute.js';
-import hierarchyRoute from './routes/hierarchyRoute.js';
+import hierarchyRoute from './routes/heirarchyRoute.js';
 import subjectRoute from './routes/subjectRoute.js';
 import classRoute from './routes/classRoute.js';
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
    res.send('Welcome to the Intitude API');
 });
 
-app.use('/api/intitude', intitudeRoute);
+app.use('/api/institude', intitudeRoute);
 app.use('/api/board', boardRoute);
 app.use('/api/student', studentRoute);
 app.use('/api/hierarchy', hierarchyRoute);
